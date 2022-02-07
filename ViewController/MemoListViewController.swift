@@ -9,7 +9,7 @@ import UIKit
 
 class MemoListViewController: UIViewController,ViewModelBindableType {
 
-    var viewModel: MemoListViewMOdel!
+    var viewModel: MemoListViewModel!
     
     func bindViewModel() {
         

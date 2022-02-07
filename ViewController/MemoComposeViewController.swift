@@ -9,7 +9,7 @@ import UIKit
 
 class MemoComposeViewController: UIViewController,ViewModelBindableType {
 
-    var viewModel : MemoComposeViewMoel!
+    var viewModel : MemoComposeViewModel!
     
     func bindViewModel() {
         
