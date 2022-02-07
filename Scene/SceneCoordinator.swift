@@ -14,6 +14,7 @@ class SceneCoordinator : SceneCoordinatorType{
     
     private var window : UIWindow
     private var currentVC : UIViewController
+    
     required init(window: UIWindow){
         self.window = window
         currentVC = window.rootViewController!

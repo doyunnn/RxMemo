@@ -26,8 +26,10 @@ extension Scene{
                 fatalError()
             }
             
-            listVC.bind(viewModel: memoListViewModel)
-            
+            DispatchQueue.main.async {
+                listVC.bind(viewModel: memoListViewModel)
+            }
+
             return nav
         case .detail(let memoDetailViewModel):
             // 네비게이션을 사용하지 않아 고려하지 않음
@@ -35,7 +37,9 @@ extension Scene{
                 fatalError()
             }
             
-            detailVC.bind(viewModel: memoDetailViewModel)
+            DispatchQueue.main.async {
+                detailVC.bind(viewModel: memoDetailViewModel)
+            }
             
             return detailVC
         case .compose(let memoComposeViewModel):
@@ -45,7 +49,9 @@ extension Scene{
             guard var composeVC = nav.viewControllers.first as? MemoComposeViewController else{
                 fatalError()
             }
-            composeVC.bind(viewModel: memoComposeViewModel)
+            DispatchQueue.main.async {
+                composeVC.bind(viewModel: memoComposeViewModel)
+            }
             
             return nav
         }

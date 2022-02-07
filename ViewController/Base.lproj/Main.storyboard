@@ -31,10 +31,48 @@
                     <view key="view" contentMode="scaleToFill" id="CYZ-oa-BZ1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kPZ-WM-cau">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="zuI-HS-S3p" style="IBUITableViewCellStyleDefault" id="qD2-6f-bvY">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qD2-6f-bvY" id="mlM-nR-4GE">
+                                            <rect key="frame" x="0.0" y="0.0" width="385.5" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zuI-HS-S3p">
+                                                    <rect key="frame" x="20" y="0.0" width="357.5" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="lUd-yV-vKb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="kPZ-WM-cau" secondAttribute="bottom" id="Di4-cE-BWd"/>
+                            <constraint firstItem="lUd-yV-vKb" firstAttribute="trailing" secondItem="kPZ-WM-cau" secondAttribute="trailing" id="LKr-Iq-zoy"/>
+                            <constraint firstItem="kPZ-WM-cau" firstAttribute="leading" secondItem="lUd-yV-vKb" secondAttribute="leading" id="cLk-kV-bc8"/>
+                            <constraint firstItem="kPZ-WM-cau" firstAttribute="top" secondItem="lUd-yV-vKb" secondAttribute="top" id="qcb-aL-OfF"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="메모목록" id="BkH-4e-FFp"/>
+                    <navigationItem key="navigationItem" title="메모목록" id="BkH-4e-FFp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wRQ-Nl-gim"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addButton" destination="wRQ-Nl-gim" id="UO6-L8-68c"/>
+                        <outlet property="listTableView" destination="kPZ-WM-cau" id="NNb-t4-6Rz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Wq-yG-WcT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
